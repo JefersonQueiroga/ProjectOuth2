@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
 
     @GetMapping("/callback")
-    public ResponseEntity<?> getAuthorizationCode(@RequestParam("code") String code, @RequestParam("state") String state){
+    public ResponseEntity<?> getAuthorizationCode(@RequestParam("client_id") String code, @RequestParam("state") String state){
         return ResponseEntity.ok().body(code + " - " + state);
     }
 }
